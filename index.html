@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>yudistyo herlambang - hari raya idul fitri</title>
+</head>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var audio = document.getElementById("musik");
+        var playPromise = audio.play();
+
+        if (playPromise !== undefined) {
+            playPromise.then(() => {
+                console.log("Audio diputar otomatis.");
+            }).catch(error => {
+                console.log("Autoplay diblokir, menunggu interaksi pengguna...");
+                document.addEventListener("click", () => {
+                    audio.play();
+                }, { once: true });
+            });
+        }
+    });
+</script>
+<body>
+  <title>Yudistyo herlambang - Selamat Idul Fitri 1446 H</title>
+	<link rel="stylesheet" href="style.css">
+    <audio id="musik" autoplay controls>
+        <source src="takbiran.mp3" type="audio/mpeg">
+        Browsermu tidak mendukung tag audio, upgrade donk!
+      </audio>
+</head>
+<body>
+
+	<section id="particles-js">
+		<div class="text">
+			<center><h1>Saya Yudistyo Herlambang mahasiswa Universitas Teknokrat Indonesia Mengucapkan<br></span></h1></center>
+			<h2>Selamat Idul Fitri 1446 H<br><span>Minal'Aidin wal-Faizin</span></h2>
+		</div>
+		<div class="masjid"></div>
+	</section>
+	<script src="particles.js"></script>
+	<script src="app.js"></script>
+    
+</body>
+</html>
+</body>
+</html>
